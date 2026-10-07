@@ -32,7 +32,6 @@ Designed specifically for **OJT / Internship applications**, junior developer po
 - **My Development Journey**:
   - Clean 3-stage timeline (`01 Learning`, `02 Building`, `03 Improving`).
   - Horizontal timeline on desktop, vertically stacked on mobile.
-- **GitHub Profile**: Connected to [@brets60](https://github.com/brets60).
 - **Interactive Live Background**: Subtle HTML5 canvas constellation network responding smoothly to cursor movement and slow ambient glow orbs.
 - **Vacant States for Experience & Projects**: Clean empty-state designs ready for OJT / Internship applications with easy HTML templates to drop in new projects and jobs.
 - **Subtle Polish & Micro-Interactions**:
