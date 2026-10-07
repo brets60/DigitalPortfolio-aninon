@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angelica Aniñon | Full-Stack Software Developer & BSIT Student</title>
+  <meta name="description" content="Personal digital portfolio of Angelica Aniñon - Full-Stack Software Developer and BSIT Student based in the Philippines. Showcasing web applications, database systems, and IoT prototypes.">
+  <meta name="author" content="Angelica Aniñon">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Interactive Live Canvas Background -->
+  <canvas id="live-bg-canvas" class="live-bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Gradient Glow Orbs -->
+  <div class="bg-glow-orb orb-top-left" aria-hidden="true"></div>
+  <div class="bg-glow-orb orb-bottom-right" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header id="main-header" class="site-header">
+    <div class="header-container">
+      <a href="#home" class="logo" aria-label="Angelica Aniñon Portfolio Home">
+        <span class="logo-text">AA</span><span class="logo-dot">.</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#journey" class="nav-link">Journey</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Action Button -->
+      <div class="header-cta">
+        <a href="#contact" class="btn btn-outline btn-sm">Let's Talk</a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#journey" class="mobile-nav-link">Journey</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-cta-wrapper">
+        <a href="#contact" class="btn btn-primary btn-block mobile-cta-btn">Let's Talk</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        
+        <!-- Left Column: Content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot pulse-animation"></span>
+            <span class="badge-text">FULL-STACK SOFTWARE DEVELOPER</span>
+          </div>
+          
+          <h1 class="hero-heading">
+            Hi, I'm <span class="highlight-name">Angelica</span>.
+          </h1>
+          
+          <p class="hero-subheading">
+            I build simple solutions for <span id="typed-text" class="typed-text">real-world problems</span><span class="typing-cursor" aria-hidden="true">|</span>
+          </p>
+          
+          <p class="hero-description">
+            I'm a BSIT student passionate about software development, web applications, databases, and technology.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View My Projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+
+          <div class="hero-meta">
+            <span class="meta-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Philippines
+            </span>
+            <span class="meta-separator">•</span>
+            <span class="meta-item">Open for OJT &amp; Internships</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Profile Portrait -->
+        <div class="hero-visual">
+          <div class="portrait-card">
+            <div class="portrait-frame">
+              <img src="assets/profile.jpg" alt="Angelica Aniñon - BSIT Student and Full-Stack Software Developer" class="portrait-img" loading="eager">
+            </div>
+            <p class="portrait-caption">BSIT Student &bull; Developer &bull; Learner</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">About Me</h2>
+          <div class="section-title-line"></div>
+        </div>
+
+        <div class="about-card">
+          <p class="about-text">
+            I'm an Information Technology student interested in building useful and practical software. I enjoy working on web applications, system development, databases, and technology projects. I continuously improve my skills by creating real projects and learning from every challenge.
+          </p>
+
+          <div class="about-action">
+            <button id="toggle-about-details" class="btn btn-outline btn-sm" aria-expanded="false" aria-controls="about-extended">
+              <span id="about-btn-label">More About Me</span>
+              <svg id="about-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Extended Information Container -->
+          <div id="about-extended" class="about-extended" hidden>
+            <div class="about-grid">
+              <div class="about-item">
+                <div class="about-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                </div>
+                <h4>Education &amp; Background</h4>
+                <p>Bachelor of Science in Information Technology (BSIT) based in the Philippines, working diligently on core computer science foundations, systems development, and practical software design.</p>
+              </div>
+
+              <div class="about-item">
+                <div class="about-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <h4>Software Development Focus</h4>
+                <p>Driven by writing structured, maintainable code across both front-end user interfaces and back-end database systems, ensuring systems solve real problems efficiently.</p>
+              </div>
+
+              <div class="about-item">
+                <div class="about-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h4>Hands-On Projects</h4>
+                <p>Experienced in integrating web backends (Python/Flask, Node.js) with databases (SQLite, MySQL, PostgreSQL) as well as embedded microcontrollers (ESP32, Arduino) for physical computing prototypes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">My Skills</h2>
+          <div class="section-title-line"></div>
+          <p class="section-subtitle">Technologies and tools I use to build systems and applications</p>
+        </div>
+
+        <div class="skills-category-group">
+          
+          <!-- Category: Frontend -->
+          <div class="skills-category">
+            <h3 class="category-heading">
+              <span class="category-indicator"></span> Frontend
+            </h3>
+            <div class="skills-grid">
+              
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 2L2 5l1.8 14.5L12 22l8.2-2.5L22 5 12 2zm6.6 5.5l-.3 2.5H7.7l.2 1.5h10.2l-.6 6-5.5 1.7-5.5-1.7-.3-3.5h2.5l.1 1.6 3.2.9 3.2-.9.3-3.4H7.2L6.6 7.5h12z"/>
+                  </svg>
+                </div>
+                <span class="skill-name">HTML</span>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 2L2 5l1.8 14.5L12 22l8.2-2.5L22 5 12 2zm6.5 6.7H9.2l.2 1.5h6.9l-.6 6.3-3.7 1.2-3.7-1.2-.2-2.6H5.7l.4 4.5 5.9 1.9 5.9-1.9.8-9.7H7.4l-.2-1.5h11.5l.2-1.5H5.4l-.2-1.5h13.5l-.2 3.5z"/>
+                  </svg>
+                </div>
+                <span class="skill-name">CSS</span>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M3 3h18v18H3V3zm14.8 13.7c-.5.8-1.4 1.3-2.6 1.3-1.8 0-2.8-1.1-2.8-2.7v-.1c0-1.7 1.1-2.7 2.8-2.7 1 0 1.8.4 2.3.9l-1 1.2c-.3-.4-.7-.6-1.3-.6-.8 0-1.3.6-1.3 1.2v.1c0 .7.5 1.2 1.3 1.2.6 0 1-.2 1.2-.5l1.1 1.2zm-6.2-4.1v4.8H9.7v-2.8c0-.7-.3-1-.8-1-.5 0-.8.3-.8.9v2.9H6.2V11h1.9v.7c.4-.5 1-.8 1.7-.8 1.1 0 1.8.7 1.8 1.7z"/>
+                  </svg>
+                </div>
+                <span class="skill-name">JavaScript</span>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-7C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"/>
+                  </svg>
+                </div>
+                <span class="skill-name">React</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category: Backend -->
+          <div class="skills-category">
+            <h3 class="category-heading">
+              <span class="category-indicator"></span> Backend
+            </h3>
+            <div class="skills-grid">
+              
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M11.9 2C8.6 2 6.5 3.4 6.5 5.7v2.2h5.5v.7H4.2C2.7 8.6 2 10 2 11.9c0 2 1.1 3.4 2.8 3.4h1.7v-2.4c0-1.9 1.5-3.5 3.5-3.5h5.4V7.6c0-2.2-2-5.6-3.5-5.6zm-1.8 1.7a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8zm2 18.3c3.3 0 5.4-1.4 5.4-3.7v-2.2h-5.5v-.7h7.8c1.5 0 2.2-1.4 2.2-3.3 0-2-1.1-3.4-2.8-3.4h-1.7v2.4c0 1.9-1.5 3.5-3.5 3.5h-5.4v1.8c0 2.2 2 5.6 3.5 5.6zm1.8-1.7a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8z"/>
+                  </svg>
+                </div>
+                <span class="skill-name">Python</span>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 2v7.31M14 9.3V1.99M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"/>
+                    <circle cx="12" cy="16" r="2"/>
+                  </svg>
+                </div>
+                <span class="skill-name">Flask</span>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 2l9 5.2v10.4L12 23 3 17.6V7.2L12 2zm0 2.3L4.9 8.4v7.2l7.1 4.1 7.1-4.1V8.4L12 4.3zm0 3.7a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+                  </svg>
+                </div>
+                <span class="skill-name">Node.js</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category: Database -->
+          <div class="skills-category">
+            <h3 class="category-heading">
+              <span class="category-indicator"></span> Database
+            </h3>
+            <div class="skills-grid">
+              
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+                <span class="skill-name">SQLite</span>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 9c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M21 15c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+                <span class="skill-name">MySQL</span>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm0-4h-2V7h2v7z"/>
+                  </svg>
+                </div>
+                <span class="skill-name">PostgreSQL</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category: Tools -->
+          <div class="skills-category">
+            <h3 class="category-heading">
+              <span class="category-indicator"></span> Tools
+            </h3>
+            <div class="skills-grid">
+              
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="6" y1="3" x2="6" y2="15"></line>
+                    <circle cx="18" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M18 9a9 9 0 0 1-9 9"></path>
+                  </svg>
+                </div>
+                <span class="skill-name">Git</span>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                </div>
+                <span class="skill-name">GitHub</span>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M17.5 2.5L23 8v8l-5.5 5.5-11-9 11-10zm-11 9l-4-3.5L1 9.5l4 3.5-4 3.5 1.5 1.5 4-3.5 11 9V14l-11-2.5z"/>
+                  </svg>
+                </div>
+                <span class="skill-name">VS Code</span>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M2 3h20v18H2V3zm3.5 4.5v9h2.3v-3.2h2.2c1.9 0 3-1.1 3-2.9 0-1.8-1.1-2.9-3-2.9H5.5zm2.3 2h1.8c.8 0 1.2.4 1.2 1 0 .6-.4 1-1.2 1H7.8V9.5zm7 4.7l1.7-1.4c.5.6 1.2 1 2.1 1 .8 0 1.3-.4 1.3-.9 0-.6-.5-.8-1.5-1.1-1.6-.4-2.7-.9-2.7-2.3 0-1.3 1.1-2.2 2.7-2.2 1.2 0 2.2.5 2.9 1.3l-1.6 1.4c-.4-.4-.8-.7-1.4-.7-.5 0-.8.3-.8.6 0 .5.5.7 1.5 1 1.6.4 2.8.9 2.8 2.4 0 1.5-1.2 2.3-3 2.3-1.6 0-2.8-.7-3.5-1.8z"/>
+                  </svg>
+                </div>
+                <span class="skill-name">PyCharm</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category: IoT -->
+          <div class="skills-category">
+            <h3 class="category-heading">
+              <span class="category-indicator"></span> IoT
+            </h3>
+            <div class="skills-grid">
+              
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="7" cy="12" r="5"></circle>
+                    <circle cx="17" cy="12" r="5"></circle>
+                    <line x1="5" y1="12" x2="9" y2="12"></line>
+                    <line x1="15" y1="12" x2="19" y2="12"></line>
+                    <line x1="17" y1="10" x2="17" y2="14"></line>
+                  </svg>
+                </div>
+                <span class="skill-name">Arduino</span>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                    <rect x="9" y="9" width="6" height="6"></rect>
+                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                    <line x1="20" y1="14" x2="23" y2="14"></line>
+                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                    <line x1="1" y1="14" x2="4" y2="14"></line>
+                  </svg>
+                </div>
+                <span class="skill-name">ESP32</span>
+              </div>
+
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                    <circle cx="12" cy="13" r="4"></circle>
+                  </svg>
+                </div>
+                <span class="skill-name">ESP32-CAM</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="experience-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Experience</h2>
+          <div class="section-title-line"></div>
+          <p class="section-subtitle">Professional experience, internships, and industry roles</p>
+        </div>
+
+        <!-- Vacant Experience State -->
+        <div class="vacant-state-card">
+          <div class="vacant-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <div class="vacant-badge">
+            <span class="badge-dot"></span>
+            <span>Available for OJT &bull; Internships</span>
+          </div>
+          <h3 class="vacant-title">Seeking My First Industry Opportunity</h3>
+          <p class="vacant-desc">
+            As a BSIT student, I am currently preparing to take on my first professional role. I am actively looking for an internship or on-the-job training (OJT) position where I can contribute my software development skills, collaborate with an engineering team, and continue learning.
+          </p>
+          <div class="vacant-actions">
+            <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
+          </div>
+        </div>
+
+        <!--
+          =======================================================
+          EXPERIENCE ITEM TEMPLATE (Uncomment to add entries):
+          =======================================================
+          <div class="experience-list" style="margin-top: 2rem;">
+            <div class="experience-card">
+              <div class="experience-card-header">
+                <div>
+                  <h3 class="experience-role">Software Developer Intern</h3>
+                  <p class="experience-company">Company Name &bull; Location</p>
+                </div>
+                <span class="experience-period">Month 2026 – Present</span>
+              </div>
+              <p class="experience-text">
+                Contributed to web development projects, improved databases, and collaborated with senior developers.
+              </p>
+            </div>
+          </div>
+        -->
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="projects-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-title-line"></div>
+          <p class="section-subtitle">Real-world applications, academic systems, and personal projects</p>
+        </div>
+
+        <!-- Vacant Projects State -->
+        <div class="vacant-state-card">
+          <div class="vacant-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <div class="vacant-badge">
+            <span class="badge-dot" style="background-color: var(--accent-cyan); box-shadow: 0 0 8px rgba(56, 189, 248, 0.6);"></span>
+            <span>In Preparation</span>
+          </div>
+          <h3 class="vacant-title">Projects Currently Being Curated</h3>
+          <p class="vacant-desc">
+            I am currently refining and documenting my academic and personal projects. Featured repositories, architectures, and live demonstrations will be showcased here soon.
+          </p>
+          <div class="vacant-actions">
+            <a href="https://github.com/brets60" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>Explore My GitHub (@brets60)</span>
+            </a>
+          </div>
+        </div>
+
+        <!--
+          =======================================================
+          PROJECT ITEM TEMPLATE (Uncomment to add projects):
+          =======================================================
+          <div class="projects-grid" style="margin-top: 2.5rem;">
+            <article class="project-card">
+              <div class="project-body">
+                <span class="project-tag">Category</span>
+                <h3 class="project-title">Project Name</h3>
+                <p class="project-desc">Project description goes here.</p>
+                <div class="project-tech-stack">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        -->
+      </div>
+    </section>
+
+    <!-- DEVELOPMENT JOURNEY SECTION -->
+    <section id="journey" class="journey-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">My Development Journey</h2>
+          <div class="section-title-line"></div>
+          <p class="section-subtitle">How I learn, build, and continuously refine my technical craftsmanship</p>
+        </div>
+
+        <div class="journey-timeline">
+          <div class="journey-line" aria-hidden="true"></div>
+
+          <!-- Stage 1 -->
+          <div class="journey-card">
+            <div class="journey-step-badge">
+              <span class="journey-step-number">01</span>
+            </div>
+            <h3 class="journey-stage-title">Learning</h3>
+            <p class="journey-stage-desc">
+              Building my foundation in programming, databases, and web development.
+            </p>
+            <div class="journey-focus">
+              <span class="focus-pill">Algorithms</span>
+              <span class="focus-pill">Relational DBs</span>
+              <span class="focus-pill">Web Core</span>
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="journey-card">
+            <div class="journey-step-badge">
+              <span class="journey-step-number">02</span>
+            </div>
+            <h3 class="journey-stage-title">Building</h3>
+            <p class="journey-stage-desc">
+              Creating academic and personal projects to apply what I learn.
+            </p>
+            <div class="journey-focus">
+              <span class="focus-pill">Full-Stack Apps</span>
+              <span class="focus-pill">IoT Hardware</span>
+              <span class="focus-pill">Real Solutions</span>
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="journey-card">
+            <div class="journey-step-badge">
+              <span class="journey-step-number">03</span>
+            </div>
+            <h3 class="journey-stage-title">Improving</h3>
+            <p class="journey-stage-desc">
+              Learning from mistakes, improving my code, and exploring new technologies.
+            </p>
+            <div class="journey-focus">
+              <span class="focus-pill">Clean Architecture</span>
+              <span class="focus-pill">User Experience</span>
+              <span class="focus-pill">AI Integration</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <div class="contact-wrapper">
+
+          <!-- Left: Contact Information -->
+          <div class="contact-info">
+            <div class="hero-badge" style="margin-bottom: 1.25rem;">
+              <span class="badge-dot"></span>
+              <span class="badge-text">GET IN TOUCH</span>
+            </div>
+
+            <h2 class="contact-heading">Let's Build Something.</h2>
+            
+            <p class="contact-text">
+              Have a project idea, internship opportunity, or simply want to connect? Feel free to reach out.
+            </p>
+
+            <div class="contact-actions-list">
+              <a href="mailto:angelica.aninon@example.com" class="btn btn-primary contact-action-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Email Me</span>
+              </a>
+
+              <a href="https://github.com/brets60" target="_blank" rel="noopener noreferrer" class="btn btn-outline contact-action-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                <span>GitHub (@brets60)</span>
+              </a>
+            </div>
+
+            <div class="contact-details-box">
+              <div class="contact-detail-row">
+                <span class="detail-label">Status</span>
+                <span class="detail-value text-accent">Ready for OJT / Internship</span>
+              </div>
+              <div class="contact-detail-row">
+                <span class="detail-label">Location</span>
+                <span class="detail-value">Philippines</span>
+              </div>
+              <div class="contact-detail-row">
+                <span class="detail-label">Response Time</span>
+                <span class="detail-value">Usually within 24 hours</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="contact-form-card">
+            <form id="portfolio-contact-form" class="contact-form" novalidate>
+              
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Name <span class="required-mark">*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your name or company" required autocomplete="name">
+                <span class="form-error-msg" id="name-error">Please enter your name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email <span class="required-mark">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="you@example.com" required autocomplete="email">
+                <span class="form-error-msg" id="email-error">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message <span class="required-mark">*</span></label>
+                <textarea id="contact-message" name="message" class="form-textarea" rows="4" placeholder="How can I help you or what opportunity would you like to discuss?" required></textarea>
+                <span class="form-error-msg" id="message-error">Please enter a message.</span>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
+                <span id="submit-btn-text">Send Message</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div id="form-alert" class="form-alert" hidden role="alert"></div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-text">AA</span><span class="logo-dot">.</span>
+        </a>
+        <h4 class="footer-name">Angelica Aniñon</h4>
+        <p class="footer-role">Full-Stack Software Developer | BSIT Student</p>
+      </div>
+
+      <div class="footer-links-group">
+        <div class="social-links" aria-label="Social Profiles">
+          <a href="https://github.com/brets60" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile (@brets60)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span>Facebook</span>
+          </a>
+
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p class="copyright">&copy; 2026 Angelica Aniñon. All rights reserved.</p>
+        <p class="footer-note">Designed and built with clean code and modern standards.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT DETAIL MODAL -->
+  <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-tag" id="modal-tag">Project Category</div>
+        <button id="modal-close-btn" class="modal-close" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h3 id="modal-title" class="modal-title">Project Title</h3>
+        
+        <div class="modal-meta-grid">
+          <div class="modal-meta-item">
+            <span class="modal-meta-label">Role</span>
+            <span class="modal-meta-val" id="modal-role">Lead Developer</span>
+          </div>
+          <div class="modal-meta-item">
+            <span class="modal-meta-label">Type</span>
+            <span class="modal-meta-val" id="modal-type">Academic System</span>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4 class="modal-section-title">Overview</h4>
+          <p id="modal-description" class="modal-text"></p>
+        </div>
+
+        <div class="modal-section">
+          <h4 class="modal-section-title">Key Capabilities</h4>
+          <ul id="modal-features" class="modal-features-list"></ul>
+        </div>
+
+        <div class="modal-section">
+          <h4 class="modal-section-title">Technologies Used</h4>
+          <div id="modal-tags" class="modal-tech-list"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="modal-action-close" class="btn btn-outline btn-sm">Close Preview</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Floating Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
